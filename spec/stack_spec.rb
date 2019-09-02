@@ -74,4 +74,5 @@ RSpec.describe Stack do
       it { expect { subject }.to change { stack.length }.by(-1) }
     end
   end
+  
 end
