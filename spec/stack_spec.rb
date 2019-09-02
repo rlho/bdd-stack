@@ -40,4 +40,21 @@ RSpec.describe Stack do
       it { expect { subject }.to change { stack.length }.by(-1) }
     end
   end
+
+  describe "#emptry?" do
+    subject { stack.empty? }
+
+    context 'stackが空の場合' do
+      it { expect(subject).to be true  }
+    end
+
+    context '1 を push 済みの stack' do
+      before do
+        stack.push 1
+      end
+
+      it { expect(subject).to be false }
+    end
+  end
+
 end

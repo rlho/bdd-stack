@@ -12,6 +12,10 @@ class Stack
     @buffer.pop
   end
 
+  def empty?
+    @buffer.empty?
+  end
+
   def length
     @buffer.length
   end
