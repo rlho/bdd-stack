@@ -57,4 +57,21 @@ RSpec.describe Stack do
     end
   end
 
+  describe "#shift" do
+    subject { stack.shift }
+
+    context 'stackが空の場合' do
+      it { expect(subject).to be_nil  }
+    end
+
+    context '1 と 5 を push 済みの stack' do
+      before do
+        stack.push 1
+        stack.push 5
+      end
+
+      it { expect(subject).to eq 1 }
+      it { expect { subject }.to change { stack.length }.by(-1) }
+    end
+  end
 end

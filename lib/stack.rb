@@ -19,4 +19,8 @@ class Stack
   def length
     @buffer.length
   end
+
+  def shift
+    @buffer.shift
+  end
 end
